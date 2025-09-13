@@ -7,6 +7,7 @@ import { TypewriterText } from "@/components/TypewriterText";
 import { SkillChip } from "@/components/SkillChip";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Github, Linkedin, Mail, Download, ExternalLink, Code2, Database, Server, Wrench } from "lucide-react";
+import profilePicture from "@/assets/profile-picture.jpg";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -92,7 +93,7 @@ const Index = () => {
             <div className="flex-shrink-0">
               <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-primary/30 animate-float">
                 <img 
-                  src="/placeholder.svg" 
+                  src={profilePicture} 
                   alt="Vasanth - Full Stack Developer"
                   className="w-full h-full object-cover"
                 />
