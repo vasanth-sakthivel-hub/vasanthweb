@@ -108,7 +108,7 @@ const Index = () => {
                 </h1>
                 <div className="text-2xl lg:text-4xl font-semibold text-muted-foreground min-h-[2.5rem]">
                   <TypewriterText 
-                    text="Full-Stack Developer (Java / Spring Boot / Thymeleaf / MySQL / MongoDB / HTML/CSS/JS)"
+                    text="Full-Stack Developer"
                     className="block"
                   />
                 </div>
