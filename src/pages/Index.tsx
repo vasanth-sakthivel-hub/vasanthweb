@@ -221,7 +221,7 @@ const Index = () => {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a 
-                  href="mailto:your.email@example.com"
+                  href="mailto:vasanthoff77@gmail.com"
                   className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110"
                 >
                   <Mail className="w-6 h-6" />
@@ -465,11 +465,11 @@ Database: MySQL / MongoDB with JPA`}
                 
                 <div className="space-y-4">
                   <a 
-                    href="mailto:your.email@example.com"
+                    href="mailto:vasanthoff77@gmail.com"
                     className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:bg-primary/10"
                   >
                     <Mail className="w-6 h-6 text-primary" />
-                    <span>your.email@example.com</span>
+                    <span>vasanthoff77@gmail.com</span>
                   </a>
                   
                   <a 
