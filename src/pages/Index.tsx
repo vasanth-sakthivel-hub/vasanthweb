@@ -115,7 +115,7 @@ const Index = () => {
               </div>
               
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Building practical web apps — Hospital Management, Bus Booking, Employee Management.
+                I build end-to-end web solutions that combine strong backend logic with engaging user experiences. My projects include
               </p>
               
               {/* CTA Buttons */}
