@@ -3,18 +3,80 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { TypewriterText } from "@/components/TypewriterText";
 import { SkillChip } from "@/components/SkillChip";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Github, Linkedin, Mail, Download, ExternalLink, Code2, Database, Server, Wrench } from "lucide-react";
 import profilePicture from "@/assets/profile-picture.jpg";
+import emailjs from '@emailjs/browser';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     setIsVisible(true);
+    // Initialize EmailJS
+    emailjs.init("uBEdU3WcoFYZzOtr3");
   }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Please fill in all fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    
+    try {
+      await emailjs.send(
+        "service_zi4yteh",
+        "template_default", // You may need to create a template in EmailJS
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: "Portfolio Owner",
+        }
+      );
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const skills = {
     backend: [
@@ -342,30 +404,52 @@ Database: MySQL / MongoDB with JPA`}
                 <CardHeader>
                   <CardTitle>Send a Message</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Name</label>
-                    <Input placeholder="Your name" className="bg-white/5 border-white/10" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
-                    <Input placeholder="your@email.com" type="email" className="bg-white/5 border-white/10" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Message</label>
-                    <Textarea 
-                      placeholder="Your message here..." 
-                      rows={4}
-                      className="bg-white/5 border-white/10"
-                    />
-                  </div>
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary/80"
-                    onClick={() => window.location.href = "mailto:your.email@example.com"}
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Send Message
-                  </Button>
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Name</label>
+                      <Input 
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="Your name" 
+                        className="bg-white/5 border-white/10"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Email</label>
+                      <Input 
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="your@email.com" 
+                        className="bg-white/5 border-white/10"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Message</label>
+                      <Textarea 
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Your message here..." 
+                        rows={4}
+                        className="bg-white/5 border-white/10"
+                        required
+                      />
+                    </div>
+                    <Button 
+                      type="submit"
+                      disabled={isLoading}
+                      className="w-full bg-primary hover:bg-primary/80"
+                    >
+                      <Mail className="w-4 h-4 mr-2" />
+                      {isLoading ? 'Sending...' : 'Send Message'}
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
               
