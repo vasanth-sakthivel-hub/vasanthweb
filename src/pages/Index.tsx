@@ -51,7 +51,7 @@ const Index = () => {
     try {
       // EmailJS configuration
       const serviceId = "service_zi4yteh";
-      const templateId = "template_6g0w2tc"; // Updated to a valid template ID
+      const templateId = "template_q2uvhf3"; // Provided by user
       
       await emailjs.send(
         serviceId,
