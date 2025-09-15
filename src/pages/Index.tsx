@@ -50,8 +50,8 @@ const Index = () => {
     
     try {
   const serviceId = "service_zi4yteh";
-  const templateId = "template_q2uvhf3";
-  const publicKey = "uBEdU3WcoFYZzOtr"; // Dashboard la irukkum
+  const templateId = "template_5d48mnv";
+  const publicKey = "uBEdU3WcoFYZzOtr3"; // Dashboard la irukkum
 
   await emailjs.send(
     serviceId,
