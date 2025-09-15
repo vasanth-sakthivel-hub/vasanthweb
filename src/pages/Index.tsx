@@ -207,7 +207,7 @@ const Index = () => {
                   className="border-primary/50 text-primary hover:bg-primary/10"
                   asChild
                 >
-                  <a href="/resume.pdf" download>
+                  <a href="/vasanth cv.pdf" download>
                     <Download className="w-4 h-4 mr-2" />
                     Download Resume
                   </a>
@@ -217,7 +217,7 @@ const Index = () => {
               {/* Social Icons */}
               <div className="flex gap-4 justify-center lg:justify-start pt-4">
                 <a 
-                  href="https://github.com/your-username" 
+                  href="https://github.com/vasanth-sakthivel-hub" 
                   className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -225,7 +225,7 @@ const Index = () => {
                   <Github className="w-6 h-6" />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/your-profile"
+                  href="www.linkedin.com/in/vasanth5278"
                   className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -485,7 +485,7 @@ Database: MySQL / MongoDB with JPA`}
                   </a>
                   
                   <a 
-                    href="https://linkedin.com/in/your-profile"
+                    href="www.linkedin.com/in/vasanth5278"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:bg-primary/10"
@@ -496,7 +496,7 @@ Database: MySQL / MongoDB with JPA`}
                   </a>
                   
                   <a 
-                    href="https://github.com/your-username"
+                    href="https://github.com/vasanth-sakthivel-hub"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:bg-primary/10"
@@ -521,7 +521,7 @@ Database: MySQL / MongoDB with JPA`}
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://github.com/your-username" 
+                href="https://github.com/vasanth-sakthivel-hub" 
                 className="text-muted-foreground hover:text-primary transition-colors"
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -529,7 +529,7 @@ Database: MySQL / MongoDB with JPA`}
                 GitHub
               </a>
               <a 
-                href="https://linkedin.com/in/your-profile"
+                href="www.linkedin.com/in/vasanth5278"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 target="_blank" 
                 rel="noopener noreferrer"
