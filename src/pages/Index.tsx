@@ -49,20 +49,18 @@ const Index = () => {
     setIsLoading(true);
     
     try {
-      // EmailJS configuration
-      const serviceId = "service_zi4yteh";
-      const templateId = "template_q2uvhf3"; // Provided by user
-      
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_name: "Vasanth",
-          to_email: "vasanthoff77@gmail.com"
-        }
+  const serviceId = "service_zi4yteh";
+  const templateId = "template_q2uvhf3";
+  const publicKey = "uBEdU3WcoFYZzOtr"; // Dashboard la irukkum
+
+  await emailjs.send(
+    serviceId,
+    templateId,
+    {
+      from_name: formData.name,   // ✅ Must match EmailJS template
+      from_email: formData.email, // ✅ Must match EmailJS template
+      message: formData.message   // ✅ Must match EmailJS template
+    }
       );
       
       toast({
