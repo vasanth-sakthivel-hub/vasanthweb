@@ -49,14 +49,19 @@ const Index = () => {
     setIsLoading(true);
     
     try {
+      // EmailJS configuration
+      const serviceId = "service_zi4yteh";
+      const templateId = "template_6g0w2tc"; // Updated to a valid template ID
+      
       await emailjs.send(
-        "service_zi4yteh",
-        "template_default", // You may need to create a template in EmailJS
+        serviceId,
+        templateId,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_name: "Portfolio Owner",
+          to_name: "Vasanth",
+          to_email: "vasanthoff77@gmail.com"
         }
       );
       
@@ -66,11 +71,20 @@ const Index = () => {
       });
       
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error('EmailJS error:', error);
+      
+      let errorMessage = "Please try again or contact me directly via email.";
+      
+      if (error?.text?.includes("template")) {
+        errorMessage = "Email template not configured. Please contact me at vasanthoff77@gmail.com directly.";
+      } else if (error?.text?.includes("service")) {
+        errorMessage = "Email service unavailable. Please contact me at vasanthoff77@gmail.com directly.";
+      }
+      
       toast({
         title: "Failed to send message",
-        description: "Please try again or contact me directly via email.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
