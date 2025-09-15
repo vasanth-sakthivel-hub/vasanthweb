@@ -125,8 +125,7 @@ const Index = () => {
         { name: 'Thymeleaf', category: 'frontend' as const },
         { name: 'MySQL', category: 'database' as const },
       ],
-      demoLink: "https://your-demo-link.com",
-      codeLink: "https://github.com/your-username/hospital-management",
+      codeLink: "https://github.com/vasanth-sakthivel-hub/guvi-project-2",
     },
     {
       title: "Bus Ticket Reservation System",
@@ -136,8 +135,7 @@ const Index = () => {
         { name: 'Thymeleaf', category: 'frontend' as const },
         { name: 'JPA', category: 'database' as const },
       ],
-      demoLink: "https://your-demo-link.com",
-      codeLink: "https://github.com/your-username/bus-booking",
+      codeLink: "https://github.com/vasanth-sakthivel-hub/guvi-project-3",
     },
     {
       title: "Employee Management System",
@@ -147,8 +145,7 @@ const Index = () => {
         { name: 'MongoDB', category: 'database' as const },
         { name: 'Spring MVC', category: 'backend' as const },
       ],
-      demoLink: "https://your-demo-link.com",
-      codeLink: "https://github.com/your-username/employee-management",
+      codeLink: "https://github.com/vasanth-sakthivel-hub/guvi-Project-1",
     }
   ];
 
@@ -225,7 +222,7 @@ const Index = () => {
                   <Github className="w-6 h-6" />
                 </a>
                 <a 
-                  href="www.linkedin.com/in/vasanth5278"
+                  href="https://www.linkedin.com/in/vasanth5278"
                   className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -485,7 +482,7 @@ Database: MySQL / MongoDB with JPA`}
                   </a>
                   
                   <a 
-                    href="www.linkedin.com/in/vasanth5278"
+                    href="https://www.linkedin.com/in/vasanth5278"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:bg-primary/10"
@@ -529,7 +526,7 @@ Database: MySQL / MongoDB with JPA`}
                 GitHub
               </a>
               <a 
-                href="www.linkedin.com/in/vasanth5278"
+                href="https://www.linkedin.com/in/vasanth5278"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 target="_blank" 
                 rel="noopener noreferrer"
