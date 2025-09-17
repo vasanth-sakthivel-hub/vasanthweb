@@ -159,7 +159,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-        <div className="container mx-auto max-w-6xl relative">
+        <div className="container mx-auto max-w-5xl relative">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Profile Picture */}
             <div className="flex-shrink-0">
@@ -244,7 +244,7 @@ const Index = () => {
 
      {/* About Section */}
 <section id="about" className="py-20 px-4">
-  <div className="container mx-auto max-w-4xl">
+  <div className="container mx-auto max-w-5xl">
     <div className={`space-y-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
       <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
         About <span className="text-primary">Me</span>
@@ -277,7 +277,7 @@ const Index = () => {
      
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 bg-white/[0.02]">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-5xl">
           <div className={`space-y-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <h2 className="text-3xl lg:text-4xl font-bold text-center">
               Skills & <span className="text-primary">Technologies</span>
@@ -342,7 +342,7 @@ const Index = () => {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-5xl">
           <div className={`space-y-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <h2 className="text-3xl lg:text-4xl font-bold text-center">
               Featured <span className="text-primary">Projects</span>
@@ -361,7 +361,7 @@ const Index = () => {
 
      {/* Experience Section */}
 <section id="experience" className="py-20 px-4 bg-white/[0.02]">
-  <div className="container mx-auto max-w-4xl">
+  <div className="container mx-auto max-w-5xl">
     <div className={`space-y-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
       <h2 className="text-3xl lg:text-4xl font-bold text-center">
         Experience & <span className="text-primary">Highlights</span>
@@ -399,7 +399,7 @@ const Index = () => {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl">
           <div className={`space-y-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <h2 className="text-3xl lg:text-4xl font-bold text-center">
               Get In <span className="text-primary">Touch</span>
