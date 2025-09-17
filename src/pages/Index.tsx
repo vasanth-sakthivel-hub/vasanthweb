@@ -91,30 +91,31 @@ const Index = () => {
   };
 
   const skills = {
-    backend: [
-      { name: 'Java', category: 'backend' as const },
-      { name: 'Spring Boot', category: 'backend' as const },
-      { name: 'REST API', category: 'backend' as const },
-      { name: 'Spring MVC', category: 'backend' as const },
-    ],
-    frontend: [
-      { name: 'Thymeleaf', category: 'frontend' as const },
-      { name: 'HTML', category: 'frontend' as const },
-      { name: 'CSS', category: 'frontend' as const },
-      { name: 'JavaScript', category: 'frontend' as const },
-    ],
-    database: [
-      { name: 'MySQL', category: 'database' as const },
-      { name: 'MongoDB', category: 'database' as const },
-      { name: 'JPA', category: 'database' as const },
-    ],
-    tools: [
-      { name: 'Git', category: 'tools' as const },
-      { name: 'Maven', category: 'tools' as const },
-      { name: 'IntelliJ', category: 'tools' as const },
-      { name: 'Docker', category: 'tools' as const },
-    ]
-  };
+  frontend: [
+    { name: 'HTML', category: 'frontend' as const },
+    { name: 'CSS', category: 'frontend' as const },
+    { name: 'JavaScript', category: 'frontend' as const },
+    { name: 'Thymeleaf', category: 'frontend' as const },
+  ],
+  backend: [
+    { name: 'Java', category: 'backend' as const },
+    { name: 'Spring Boot', category: 'backend' as const },
+    { name: 'Spring MVC', category: 'backend' as const },
+    { name: 'REST API', category: 'backend' as const },
+  ],
+  database: [
+    { name: 'MySQL', category: 'database' as const },
+    { name: 'MongoDB', category: 'database' as const },
+    { name: 'JPA', category: 'database' as const },
+  ],
+  tools: [
+    { name: 'Git', category: 'tools' as const },
+    { name: 'Maven', category: 'tools' as const },
+    { name: 'IntelliJ', category: 'tools' as const },
+    { name: 'Docker', category: 'tools' as const },
+  ]
+};
+
 
   const projects = [
     {
@@ -241,50 +242,39 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className={`space-y-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
-              About <span className="text-primary">Me</span>
-            </h2>
-            
-            <Card className="bg-white/5 backdrop-blur-sm border border-white/10">
-              <CardContent className="p-8 space-y-6">
-                <p className="text-lg leading-relaxed text-muted-foreground">
-                  I build full-stack web applications using Java + Spring Boot on the backend, 
-                  Thymeleaf or custom HTML/CSS/JS frontends, and relational/non-relational DBs (MySQL, MongoDB). 
-                  I prefer clean code, simple UX, and reusing existing modules to ship faster.
-                </p>
-                
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold">Tech Stack:</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li><strong>Languages:</strong> Java, SQL, JavaScript</li>
-                    <li><strong>Frameworks:</strong> Spring Boot, Thymeleaf</li>
-                    <li><strong>Databases:</strong> MySQL, MongoDB</li>
-                    <li><strong>Tools:</strong> Git, Maven, IntelliJ</li>
-                  </ul>
-                </div>
-                
-                {/* Tech Snapshot Code Block */}
-                <div className="bg-black/20 rounded-lg p-4 border border-primary/20">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Code2 className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-primary">Tech Snapshot</span>
-                  </div>
-                  <pre className="text-sm text-muted-foreground">
-{`Backend: Java + Spring Boot + REST APIs
-Frontend: Thymeleaf + HTML/CSS/JavaScript  
-Database: MySQL / MongoDB with JPA`}
-                  </pre>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+     {/* About Section */}
+<section id="about" className="py-20 px-4">
+  <div className="container mx-auto max-w-4xl">
+    <div className={`space-y-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+      <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
+        About <span className="text-primary">Me</span>
+      </h2>
+      
+      <Card className="bg-white/5 backdrop-blur-sm border border-white/10">
+        <CardContent className="p-8 space-y-6">
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            I’m a passionate <strong>Full-Stack Developer</strong> with strong expertise in 
+            <strong> Java, Spring Boot, MySQL, and modern front-end technologies</strong>. 
+            I enjoy building scalable web applications, designing efficient database models, 
+            and delivering clean, user-friendly interfaces.
+          </p>
 
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold">I focus on:</h3>
+            <ul className="list-disc pl-6 text-muted-foreground space-y-1">
+              <li>Developing <strong>RESTful APIs</strong> and backend services with Spring Boot</li>
+              <li>Creating <strong>responsive UIs</strong> with HTML, CSS, JavaScript, and Thymeleaf</li>
+              <li>Writing <strong>clean, reusable, and maintainable code</strong></li>
+              <li>Exploring new technologies to improve performance and scalability</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+                
+     
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 bg-white/[0.02]">
         <div className="container mx-auto max-w-6xl">
@@ -369,35 +359,43 @@ Database: MySQL / MongoDB with JPA`}
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-20 px-4 bg-white/[0.02]">
-        <div className="container mx-auto max-w-4xl">
-          <div className={`space-y-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-center">
-              Experience & <span className="text-primary">Highlights</span>
-            </h2>
-            
-            <Card className="bg-white/5 backdrop-blur-sm border border-white/10">
-              <CardContent className="p-8">
-                <ul className="space-y-4 text-lg">
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary text-2xl">•</span>
-                    <span>Built full-stack web applications end-to-end using modern Java ecosystem</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary text-2xl">•</span>
-                    <span>Focus on reusable modules and clean code architecture for maintainability</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary text-2xl">•</span>
-                    <span>Comfortable with unit testing, version control, and basic CI/CD practices</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+     {/* Experience Section */}
+<section id="experience" className="py-20 px-4 bg-white/[0.02]">
+  <div className="container mx-auto max-w-4xl">
+    <div className={`space-y-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+      <h2 className="text-3xl lg:text-4xl font-bold text-center">
+        Experience & <span className="text-primary">Highlights</span>
+      </h2>
+      
+      <Card className="bg-white/5 backdrop-blur-sm border border-white/10">
+        <CardContent className="p-8">
+          <ul className="space-y-4 text-lg">
+            <li className="flex items-start gap-3">
+              <span className="text-primary text-2xl">•</span>
+              <span>Built and deployed <strong>3+ full-stack applications</strong> (Employee Management, Bus Ticket Booking, Hospital Management) using Spring Boot & MySQL/MongoDB</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary text-2xl">•</span>
+              <span>Designed <strong>relational database schemas</strong> and optimized SQL queries for scalability and performance</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary text-2xl">•</span>
+              <span>Integrated <strong>frontend & backend</strong> seamlessly with Thymeleaf and REST APIs</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary text-2xl">•</span>
+              <span>Implemented <strong>clean code practices</strong>, modular design, and unit testing to reduce dev time</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary text-2xl">•</span>
+              <span>Hands-on with <strong>Git, Maven, IntelliJ, and Docker</strong> for smooth CI/CD workflows</span>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
